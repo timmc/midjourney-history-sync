@@ -72,7 +72,7 @@ echo "$jobs" | jq 'sort_by(.enqueue_time)[]' -c | while IFS= read -r job; do
     echo "$job" | jq . > "$tdir/job.json"
 
     # Download images
-    echo "$job" | jq '.image_paths[]' -c -r | while IFS= read -r img_url; do
+    echo "$job" | jq '.image_paths[]' -c -r | while IFS=$'\t\r' read -r img_url; do
         # Get image filename and make sure it's safe to use on the filesystem.
         fname="$(echo "$img_url" | sed 's|[^?#]*/||')"
         if [[ ! "$fname" =~ ^[0-9_]+\.(png|jpg|jpeg|webp)$ ]]; then
