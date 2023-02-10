@@ -16,7 +16,7 @@ network tab.
 
 If you want a supported option, please ask Midjourney.
 
-2023-02-10: I've stopped playing with Midjourney and can't commit to
+**2023-02-10**: I've stopped playing with Midjourney and can't commit to
 testing any improvements, so I'm archiving the repo. Check the list of
 recently updated forks to see if there's a maintained version:
 https://github.com/timmc/midjourney-history-sync/network
